@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ママなび - プライバシーポリシー & お問い合わせ</title>
+    <meta name="description" content="ママなびのプライバシーポリシーおよびお問い合わせ先のご案内です。">
+    <style>
+        :root {
+            --bg-top: #fff5f7;
+            --bg-center: #ffefff;
+            --bg-bottom: #fff7fb;
+            --card-bg: rgba(255, 255, 255, 0.72);
+            --card-border: rgba(255, 107, 157, 0.18);
+            --text-primary: #332941;
+            --text-secondary: #6b5f7a;
+            --accent: #ff6b9d;
+            --accent-soft: rgba(255, 107, 157, 0.12);
+            --shadow: rgba(51, 41, 65, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-center) 45%, var(--bg-bottom) 100%);
+            color: var(--text-primary);
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.85;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 24px 0 48px;
+            padding: 36px 40px 44px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            box-shadow: 0 12px 40px var(--shadow);
+            backdrop-filter: blur(8px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+            margin: 32px 0 0;
+            padding-bottom: 16px;
+            width: 100%;
+            max-width: 800px;
+            border-bottom: 1px solid rgba(51, 41, 65, 0.1);
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 12px 18px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.25s ease, border-color 0.25s ease;
+            border-bottom: 3px solid transparent;
+            border-radius: 8px 8px 0 0;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+            background: var(--accent-soft);
+        }
+
+        nav a.active {
+            color: var(--text-primary);
+            border-bottom-color: var(--accent);
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+            animation: fadeIn 0.45s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .brand {
+            text-align: center;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            color: var(--text-secondary);
+            margin-top: 28px;
+            margin-bottom: 0;
+        }
+
+        .brand strong {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 1.65rem;
+            margin: 0 0 28px;
+            text-align: center;
+            color: var(--text-primary);
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        h2 {
+            font-size: 1.12rem;
+            margin-top: 36px;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+            border-left: 4px solid var(--accent);
+            padding-left: 14px;
+            font-weight: 700;
+        }
+
+        h2:first-of-type {
+            margin-top: 8px;
+        }
+
+        p {
+            margin: 0 0 18px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            margin: 0 0 18px;
+            padding-left: 1.35rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .contact-box {
+            text-align: center;
+            padding: 28px 16px 12px;
+        }
+
+        .contact-box p {
+            max-width: 36em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .mail-button {
+            display: inline-block;
+            margin-top: 22px;
+            padding: 14px 32px;
+            border: 2px solid var(--accent);
+            border-radius: 999px;
+            color: var(--accent);
+            font-weight: 700;
+            transition: background 0.25s ease, color 0.25s ease;
+            font-size: 0.95rem;
+            word-break: break-all;
+        }
+
+        .mail-button:hover {
+            background: var(--accent-soft);
+            text-decoration: none;
+            color: #e35587;
+        }
+
+        .note {
+            margin-top: 28px;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            opacity: 0.92;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 24px 16px 32px;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-align: center;
+            opacity: 0.85;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px 20px 32px;
+                margin: 16px 0 36px;
+            }
+
+            h1 {
+                font-size: 1.35rem;
+            }
+
+            nav {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <p class="brand"><strong>ママなび</strong>　サポート</p>
+
+    <nav id="main-nav" aria-label="ページ内メニュー">
+        <a href="#privacy" id="link-privacy">プライバシーポリシー</a>
+        <a href="#contact" id="link-contact">お問い合わせ</a>
+    </nav>
+
+    <div class="container">
+        <section id="privacy" class="page" aria-labelledby="privacy-title">
+            <h1 id="privacy-title">ママなび プライバシーポリシー</h1>
+
+            <p>
+                本プライバシーポリシーは、スマートフォンアプリ「ママなび」（以下「本アプリ」）における、ユーザーの情報の取り扱いについて説明するものです。
+            </p>
+
+            <h2>1. 収集する情報</h2>
+            <p>
+                本アプリは、サービス提供のために次のような情報を取得・保存する場合があります。
+            </p>
+            <ul>
+                <li>アカウントに関連する情報（メールアドレス等、ログイン手段に応じた識別情報）</li>
+                <li>プロフィールや妊娠・出産に関するご入力内容（例：出産予定日、検診やメモの記録など）</li>
+                <li>端末やアプリの利用に伴い自動的に生成される技術情報（通信・認証のために必要な範囲）</li>
+            </ul>
+            <p>
+                位置情報やマップ機能を利用する場合は、OS の許可に基づき、必要な範囲で位置情報が利用されることがあります。
+            </p>
+
+            <h2>2. 利用目的</h2>
+            <p>
+                取得した情報は、次の目的のために利用します。
+            </p>
+            <ul>
+                <li>本アプリの機能の提供・維持・改善</li>
+                <li>ユーザー認証、不正利用の防止</li>
+                <li>お問い合わせへの対応</li>
+                <li>利用状況に基づくサービス改善（個人を特定しない形の統計を含む）</li>
+            </ul>
+
+            <h2>3. クラウドサービス・第三者</h2>
+            <p>
+                本アプリは、データ保存や認証などのために、Firebase 等のクラウドサービスを利用する場合があります。
+                これらの提供者は、各社のプライバシーポリシーに従いデータを処理します。
+            </p>
+            <p>
+                地図・検索機能等で Google など第三者の SDK や API を利用する場合、各提供者の規約・ポリシーが適用されることがあります。
+            </p>
+
+            <h2>4. 第三者提供</h2>
+            <p>
+                法令に基づく場合を除き、ユーザーの同意なく個人を特定できる情報を第三者に提供することはありません。
+                ただし、前項のサービス提供者が、システム運用の範囲でデータを処理する場合があります。
+            </p>
+
+            <h2>5. 保存期間</h2>
+            <p>
+                データは、サービス提供に必要な期間保存し、不要となった場合は合理的な方法で削除または匿名化します。
+            </p>
+
+            <h2>6. セキュリティ</h2>
+            <p>
+                個人情報の漏えい、滅失、毀損の防止のため、適切な安全管理措置を講じます。
+            </p>
+
+            <h2>7. お問い合わせ・開示等</h2>
+            <p>
+                保有個人データの開示・訂正・削除等のご請求は、本ページの「お問い合わせ」からご連絡ください。本人確認のうえ、法令に従い対応します。
+            </p>
+
+            <h2>8. 未成年者の利用</h2>
+            <p>
+                本アプリの利用にあたっては、必要に応じて保護者の方の同意・監督のもとでご利用ください。
+            </p>
+
+            <h2>9. 本ポリシーの変更</h2>
+            <p>
+                本ポリシーは必要に応じて改定します。重要な変更がある場合は、本ページまたはアプリ内で周知するよう努めます。
+            </p>
+
+            <p style="margin-top: 28px; font-size: 0.85rem;">
+                最終更新日：<!-- 日付を入力してください -->2026年4月24日
+            </p>
+        </section>
+
+        <section id="contact" class="page" aria-labelledby="contact-title">
+            <div class="contact-box">
+                <h1 id="contact-title">お問い合わせ</h1>
+                <p>ママなびをご利用いただき<br>ありがとうございます。</p>
+                <p>
+                    アプリのご利用方法、不具合、改善のご希望などは、<br>
+                    下記メールアドレスまでお問い合わせください。
+                </p>
+
+                <!-- 公開用メールアドレスに差し替えてください -->
+                <a href="mailto:support@example.com" class="mail-button">support@example.com</a>
+
+                <p class="note">
+                    ※返信までにお時間をいただく場合がございます。あらかじめご了承ください。<br>
+                    ※お問い合わせ内容によっては回答できない場合があります。
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        © ママなび
+    </footer>
+
+    <script>
+        function handleRouting() {
+            const hash = window.location.hash || '#privacy';
+            const pages = document.querySelectorAll('.page');
+            const links = document.querySelectorAll('nav a');
+
+            pages.forEach(function (page) {
+                if ('#' + page.id === hash) {
+                    page.classList.add('active');
+                } else {
+                    page.classList.remove('active');
+                }
+            });
+
+            links.forEach(function (link) {
+                if (link.getAttribute('href') === hash) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+
+            window.scrollTo(0, 0);
+        }
+
+        window.addEventListener('hashchange', handleRouting);
+        window.addEventListener('load', handleRouting);
+    </script>
+</body>
+</html>
